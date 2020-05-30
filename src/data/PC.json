@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "LENOVO V530-15ICB TW",
+        "photo": "http://developer-hr.com/webshop_demo/1.png",
+        "price": "5400,00"
+    },
+    {
+        "id": 1,
+        "name": "Gamer Hydra",
+        "photo": "http://developer-hr.com/webshop_demo/2.png",
+        "price": "6400,00"
+    },
+    {
+        "id": 2,
+        "name": "Gamer Hydra 2",
+        "photo": "http://developer-hr.com/webshop_demo/3.png",
+        "price": "7256,00"
+    },
+    {
+        "id": 3,
+        "name": "Gamer SuperMax ",
+        "photo": "http://developer-hr.com/webshop_demo/4.png",
+        "price": "7000,00"
+    },
+    {
+        "id": 4,
+        "name": "Gamer SuperMax 2",
+        "photo": "http://developer-hr.com/webshop_demo/5.png",
+        "price": "5496,00"
+    },
+    {
+        "id": 5,
+        "name": "Gamer SuperMax 3",
+        "photo": "http://developer-hr.com/webshop_demo/6.png",
+        "price": "8965,00"
+    }
+]
