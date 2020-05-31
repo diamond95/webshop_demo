@@ -25,5 +25,8 @@ npm install
 cd src
 nodemon app.js
 ```
-
+## Web
 ![Screenshot](https://developer-hr.com/assets/images/webshop.png)
+
+## Mobile responsive
+![Screenshot](https://developer-hr.com/assets/images/responsive.png)
