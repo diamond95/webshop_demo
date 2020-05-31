@@ -26,9 +26,7 @@
           <v-icon right dark>mdi-cart</v-icon>
         </v-btn>
       </v-col>
-      <v-col cols="12" lg="3" md="3" >
-        
-      </v-col>
+      <v-col cols="12" lg="3" md="3"></v-col>
     </v-row>
 
     <v-card v-if="showSkeleton">
@@ -83,6 +81,7 @@
       </v-col>
       <v-col cols="12" md="3" lg="3"></v-col>
     </v-row>
+.
   </v-container>
 </template>
 
@@ -96,6 +95,7 @@
 <script>
 //import store from "@/store/store";
 export default {
+  components: {},
   props: {
     showSkeleton: Boolean,
     showProductsComp: Boolean,
@@ -110,7 +110,8 @@ export default {
       loading3: false,
       loading4: false,
       loading5: false,
-      cart: []
+      cart: [],
+      cartNotif: false
     };
   },
   watch: {
@@ -132,9 +133,16 @@ export default {
       });
     },
     addToCart(index) {
-      this.cart.push(index);
-      console.log(this.cart);
+      this.openNotification("bottom-center", "#0bde66");
       this.$store.commit("addToCart", index);
+    },
+    openNotification(position = null, color) {
+      this.$vs.notification({
+        color,
+        position,
+        title: "Cart",
+        text: "Item added to cart!"
+      });
     }
   }
 };
