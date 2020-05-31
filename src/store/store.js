@@ -22,7 +22,8 @@ export default new Vuex.Store({
         user: null,
         isUserLoggedIn: false,
       
-        cart: []
+        cart: [],
+        search: ''
 
     },
     mutations: {
@@ -48,6 +49,9 @@ export default new Vuex.Store({
                 state.cart = []
             }
             
+        },
+        lastSearch(state, search) {
+            state.search = search
         }
 
 

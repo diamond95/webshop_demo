@@ -112,6 +112,7 @@
 //import store from "@/store/store";
 
 export default {
+  
   components: {  },
   props: {
     showSkeleton: Boolean,

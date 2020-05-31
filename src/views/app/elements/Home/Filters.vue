@@ -60,6 +60,7 @@
 </style>
 
 <script>
+import store from "@/store/store";
 import PC from "@/data/PC.json";
 import Products from "./Products";
 export default {
@@ -95,7 +96,18 @@ export default {
     category: [],
     product_list: []
   }),
+  created() {
+    /* eslint-disable */
+    console.log()
+    this.lastSearch()
+  },  
   methods: {
+    lastSearch() {
+      if(store.state.search != "") {
+        this.category = store.state.search
+        this.search()
+      }
+    },  
     search() {
       this.product_list = []
       this.loading3 = true;
@@ -112,8 +124,9 @@ export default {
         ),
         2500
       );
-
+      
       if (this.category == "PC") this.product_list = this.PC_list;
+      this.$store.commit("lastSearch", this.category)
     }
   }
 };

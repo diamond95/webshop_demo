@@ -64,6 +64,7 @@ export default {
       this.changePasswordToggle = !this.changePasswordToggle;
     },
     logout() {
+      this.$store.commit("lastSearch", '')
       this.$router.push({
         name: "Login"
       });

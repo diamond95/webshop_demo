@@ -94,7 +94,8 @@ export default {
      * @method POST
      */
     async login() {
-      //this.$store.dispatch("CartCount", 0)
+      this.$store.commit("lastSearch", '')
+  
       this.$router.push({
         name: "Home"
       });
