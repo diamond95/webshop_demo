@@ -16,10 +16,14 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+## Run Backend
+(second terminal / cmd)
 ```
-npm run lint
+cd project
+cd server
+npm install
+cd src
+nodemon app.js
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Screenshot](https://developer-hr.com/assets/images/webshop.png)
