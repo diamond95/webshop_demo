@@ -76,8 +76,19 @@ import "vuetify/dist/vuetify.min.css";
 
 export default {
   name: "Login",
+  created() {
+    this.openNotification('top-center', "#030303");
+  },
   components: {},
   methods: {
+    openNotification(position = null, color) {
+      this.$vs.notification({
+        color,
+        position,
+        title: "Hi",
+        text: "Welcome!"
+      });
+    },
     /**
      * @description Function for checking the accuracy of the user's email and password, saving token & redirecting to dashboard page
      * @method POST

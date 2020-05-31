@@ -58,7 +58,7 @@
             <v-card-actions>
               <v-btn color="green" text @click="addToCart(product_list[index])">Add to cart</v-btn>
 
-              <v-btn color="purple" text>Explore</v-btn>
+              <v-btn color="purple" text @click="exploreDialog(product_list[index])">Explore</v-btn>
               <v-spacer></v-spacer>
               <v-btn icon>
                 <v-icon color="red">mdi-heart</v-icon>
@@ -81,7 +81,20 @@
       </v-col>
       <v-col cols="12" md="3" lg="3"></v-col>
     </v-row>
-.
+    <v-dialog v-model="dialog" width="500">
+      <v-card>
+        <v-card-title class="headline blue lighten-2" primary-title>{{ dialogData.name }}</v-card-title>
+        <div class="empty-space"></div>
+        <v-card-text>{{ dialogData.description }}</v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="closeDialog()">OK</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -89,13 +102,17 @@
 .spacer {
   width: 5px;
 }
+.empty-space {
+  height: 30px;
+}
 </style>
 
 
 <script>
 //import store from "@/store/store";
+
 export default {
-  components: {},
+  components: {  },
   props: {
     showSkeleton: Boolean,
     showProductsComp: Boolean,
@@ -111,7 +128,10 @@ export default {
       loading4: false,
       loading5: false,
       cart: [],
-      cartNotif: false
+      cartNotif: false,
+      dialog: false,
+      dialogData: []
+  
     };
   },
   watch: {
@@ -126,6 +146,13 @@ export default {
   },
   computed: {},
   methods: {
+    exploreDialog(index) {
+      this.dialogData = index
+      this.dialog = true
+    },
+    closeDialog() {
+      this.dialog = false
+    },
     /* eslint-disable */
     myCart() {
       this.$router.push({

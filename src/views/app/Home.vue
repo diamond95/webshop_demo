@@ -3,7 +3,7 @@
     <router-view />
     <Navbar />
     <Filters></Filters>
-    <Welcome v-if="welcomeNotification"></Welcome>
+    
   </v-app>
 </template>
 
@@ -13,14 +13,14 @@
 import store from "@/store/store";
 import Navbar from "./elements/Navbar";
 import Filters from "./elements/Home/Filters"
-import Welcome from "./elements/Settings/Welcome"
+
 
 export default {
   name: "Home",
   components: {
     Navbar,
     Filters,
-    Welcome
+    
 
   },
 
@@ -39,13 +39,11 @@ export default {
 
   mounted() {
     // this.checkAuth()
-    this.welcome()
+
   },
   methods: {
  
-    welcome() {
-      this.welcomeNotification = true
-    },
+ 
     /**
      * @description Function for check if user is loggedIn
      */
