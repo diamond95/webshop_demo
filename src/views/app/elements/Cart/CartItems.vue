@@ -75,29 +75,10 @@ export default {
 
       { text: "Actions", value: "actions", sortable: false }
     ],
-    items: [],
-    editedIndex: -1,
-    editedItem: {
-      name: "",
-      calories: 0,
-      fat: 0,
-      carbs: 0,
-      protein: 0
-    },
-    defaultItem: {
-      name: "",
-      calories: 0,
-      fat: 0,
-      carbs: 0,
-      protein: 0
-    }
+    items: []
   }),
 
-  computed: {
-    formTitle() {
-      return this.editedIndex === -1 ? "New Item" : "Edit Item";
-    }
-  },
+  computed: {},
 
   watch: {
     dialog(val) {
@@ -126,31 +107,37 @@ export default {
       });
     },
     goCheckout() {
-      this.$router.push({
-        name: "Checkout"
-      });
+      let checkCart = store.state.cart;
+      if (checkCart.length > 0) {
+        this.$router.push({
+          name: "Checkout"
+        });
+      }
     },
     emptyCart() {
       this.openNotification("bottom-center", "#B71C1C");
-      
     },
     openNotification(position = null, color) {
       this.$vs.notification({
         loading: true,
         duration: 2000,
         color,
-        position,
+        position
       });
-      setTimeout(() => (this.$store.commit("emptyCart", true),
-      this.initialize()), 2000)
-      setTimeout(() => (this.$vs.notification({
-
-        color,
-        position,
-        title: "Cart",
-        text: "Your cart is empty!"
-      })), 2500);
-      
+      setTimeout(
+        () => (this.$store.commit("emptyCart", true), this.initialize()),
+        2000
+      );
+      setTimeout(
+        () =>
+          this.$vs.notification({
+            color,
+            position,
+            title: "Cart",
+            text: "Your cart is empty!"
+          }),
+        2500
+      );
     }
   }
 };
