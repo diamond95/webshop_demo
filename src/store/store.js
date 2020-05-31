@@ -41,6 +41,13 @@ export default new Vuex.Store({
         addToCart(state, cartitem) {
 
             state.cart.push(cartitem)
+        },
+        emptyCart(state, bool) {
+
+            if(bool) {
+                state.cart = []
+            }
+            
         }
 
 

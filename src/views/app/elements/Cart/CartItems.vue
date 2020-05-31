@@ -6,19 +6,27 @@
         <v-btn color="red" rounded @click="goBack()">Back</v-btn>
       </v-col>
       <v-col cols="12" md="10" lg="10">
-        <v-data-table :headers="headers" :items="items" sort-by="calories" class="elevation-1">
+        <v-data-table
+          :headers="headers"
+          :items="items"
+          :item-key="'name' + 1"
+          sort-by="calories"
+          class="elevation-1"
+        >
           <template v-slot:top>
             <v-toolbar flat color="white">
               <v-toolbar-title>My Cart</v-toolbar-title>
               <v-divider class="mx-4" inset vertical></v-divider>
               <v-spacer></v-spacer>
+
+              <v-btn color="error" @click="emptyCart()" class="mb-2" >Empty cart</v-btn>
             </v-toolbar>
           </template>
           <template v-slot:item.actions="{ item }">
             <v-icon small @click="deleteItem(item)">mdi-delete</v-icon>
           </template>
           <template v-slot:no-data>
-            <v-btn color="primary" @click="initialize">Reset</v-btn>
+            <i>Your cart is empty. Go add some items!</i>
           </template>
         </v-data-table>
       </v-col>
@@ -86,17 +94,14 @@ export default {
 
   methods: {
     initialize() {
-      this.items = store.state.cart
+      this.items = store.state.cart;
     },
-
 
     deleteItem(item) {
       const index = this.items.indexOf(item);
       confirm("Are you sure you want to delete this item?") &&
         this.items.splice(index, 1);
     },
-
- 
 
     goBack() {
       this.$router.push({
@@ -106,6 +111,19 @@ export default {
     goCheckout() {
       this.$router.push({
         name: "Checkout"
+      });
+    },
+    emptyCart() {
+      this.openNotification("bottom-center", "#B71C1C");
+      this.$store.commit("emptyCart", true)
+      this.initialize()
+    },
+    openNotification(position = null, color) {
+      this.$vs.notification({
+        color,
+        position,
+        title: "Cart",
+        text: "Your cart is empty!"
       });
     }
   }

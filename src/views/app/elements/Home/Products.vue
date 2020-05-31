@@ -133,7 +133,7 @@ export default {
       });
     },
     addToCart(index) {
-      this.openNotification("bottom-center", "#0bde66");
+      this.openNotification("bottom-center", "#4CAF50");
       this.$store.commit("addToCart", index);
     },
     openNotification(position = null, color) {
