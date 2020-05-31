@@ -10,9 +10,14 @@
           :headers="headers"
           :items="items"
           :item-key="'name' + 1"
-          sort-by="calories"
+          sort-by="name"
           class="elevation-1"
         >
+        <template v-slot:item.photo="{ item }">
+            <div class="p-2">
+              <v-img :src="item.photo" :alt="item.name" width="70px"></v-img>
+            </div>
+          </template>
           <template v-slot:top>
             <v-toolbar flat color="white">
               <v-toolbar-title>My Cart</v-toolbar-title>
@@ -47,6 +52,10 @@ export default {
   data: () => ({
     dialog: false,
     headers: [
+      {
+        text: "Photo",
+        value: "photo"
+      },
       {
         text: "Product Name",
         align: "start",

@@ -62,6 +62,7 @@
 <script>
 import store from "@/store/store";
 import PC from "@/data/PC.json";
+import Laptops from "@/data/Laptops.json";
 import Products from "./Products";
 export default {
   components: {
@@ -69,6 +70,7 @@ export default {
   },
   data: () => ({
     PC_list: PC,
+    Laptops_list: Laptops,
     categories: [
       "PC",
       "Laptops",
@@ -129,6 +131,7 @@ export default {
       );
       
       if (this.category == "PC") this.product_list = this.PC_list;
+      if (this.category == "Laptops") this.product_list = this.Laptops_list;
       this.$store.commit("lastSearch", this.category)
     }
   }
