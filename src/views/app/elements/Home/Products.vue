@@ -56,7 +56,12 @@
             </v-card-subtitle>
 
             <v-card-actions>
-              <v-btn color="green" text :loading="loading && index==indexKey" @click="addToCart(product_list[index]); loader = 'loading';indexKey=index">Add to cart</v-btn>
+              <v-btn
+                color="green"
+                text
+                :loading="loading && index==indexKey"
+                @click="addToCart(product_list[index]); loader = 'loading';indexKey=index"
+              >Add to cart</v-btn>
 
               <v-btn color="purple" text @click="exploreDialog(product_list[index])">Explore</v-btn>
               <v-spacer></v-spacer>
@@ -89,6 +94,22 @@
 
         <v-divider></v-divider>
 
+        
+        <v-divider dark></v-divider>
+        <v-card-actions class="pa-4 white lighten-2">
+          Rate this product
+          <v-spacer></v-spacer>
+          <span class="grey--text text--lighten-1 caption mr-2">({{ dialogData.rating }})</span>
+          <v-rating
+            v-model="dialogData.rating"
+            background-color="black"
+            color="yellow accent-4"
+            dense
+            half-increments
+            hover
+            size="18"
+          ></v-rating>
+        </v-card-actions>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="primary" text @click="closeDialog()">OK</v-btn>
@@ -105,7 +126,6 @@
 .empty-space {
   height: 30px;
 }
-
 </style>
 
 
@@ -127,7 +147,8 @@ export default {
       loading3: false,
       cart: [],
       dialog: false,
-      dialogData: []
+      dialogData: [],
+      rating: null
     };
   },
   watch: {
@@ -156,7 +177,6 @@ export default {
       });
     },
     addToCart(index) {
-    
       this.openNotification("bottom-center", "#4CAF50");
       this.$store.commit("addToCart", index);
     },
