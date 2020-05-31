@@ -3,7 +3,7 @@
     <div class="empty-space"></div>
     <v-row>
       <v-col cols="12" md="1" lg="1">
-        <v-btn color="red" rounded @click="goBack()">Back</v-btn>
+        <v-btn color="red" class="white--text" rounded @click="goBack()"><v-icon left >mdi-arrow-left</v-icon> Back </v-btn>
       </v-col>
       <v-col cols="12" md="10" lg="10">
         <v-data-table
@@ -19,7 +19,7 @@
               <v-divider class="mx-4" inset vertical></v-divider>
               <v-spacer></v-spacer>
 
-              <v-btn color="error" @click="emptyCart()" class="mb-2" >Empty cart</v-btn>
+              <v-btn color="error" @click="emptyCart()" class="mb-2" >Empty cart  <v-icon right>mdi-delete</v-icon></v-btn>
             </v-toolbar>
           </template>
           <template v-slot:item.actions="{ item }">
@@ -31,7 +31,7 @@
         </v-data-table>
       </v-col>
       <v-col cols="12" md="1" lg="1">
-        <v-btn color="red" rounded @click="goCheckout()">Checkout</v-btn>
+        <v-btn color="red" class="white--text" rounded @click="goCheckout()">Checkout <v-icon right >mdi-check</v-icon></v-btn>
       </v-col>
     </v-row>
   </v-container>

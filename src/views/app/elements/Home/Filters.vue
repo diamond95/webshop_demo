@@ -109,6 +109,7 @@ export default {
         this.category = store.state.search
         this.search()
       }
+      this.loadTime = 2500
     },  
     search() {
       this.product_list = []
