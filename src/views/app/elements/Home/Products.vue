@@ -56,7 +56,7 @@
             </v-card-subtitle>
 
             <v-card-actions>
-              <v-btn color="green" text @click="addToCart(product_list[index])">Add to cart</v-btn>
+              <v-btn color="green" text :loading="loading && index==indexKey" @click="addToCart(product_list[index]); loader = 'loading';indexKey=index">Add to cart</v-btn>
 
               <v-btn color="purple" text @click="exploreDialog(product_list[index])">Explore</v-btn>
               <v-spacer></v-spacer>
@@ -105,6 +105,7 @@
 .empty-space {
   height: 30px;
 }
+
 </style>
 
 
@@ -134,7 +135,7 @@ export default {
       const l = this.loader;
       this[l] = !this[l];
 
-      setTimeout(() => (this[l] = false), 3000);
+      setTimeout(() => (this[l] = false), 1500);
 
       this.loader = null;
     }
@@ -155,6 +156,7 @@ export default {
       });
     },
     addToCart(index) {
+    
       this.openNotification("bottom-center", "#4CAF50");
       this.$store.commit("addToCart", index);
     },
