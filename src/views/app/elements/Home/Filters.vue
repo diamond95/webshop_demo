@@ -94,7 +94,8 @@ export default {
     discount: false,
     new_products: true,
     category: [],
-    product_list: []
+    product_list: [],
+    loadTime: 2500
   }),
   created() {
     /* eslint-disable */
@@ -104,6 +105,7 @@ export default {
   methods: {
     lastSearch() {
       if(store.state.search != "") {
+        this.loadTime = 700
         this.category = store.state.search
         this.search()
       }
@@ -122,7 +124,7 @@ export default {
           (this.showAddPromotion = true),
           (this.loading3 = false)
         ),
-        2500
+        this.loadTime
       );
       
       if (this.category == "PC") this.product_list = this.PC_list;

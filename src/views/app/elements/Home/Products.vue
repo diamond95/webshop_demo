@@ -112,8 +112,7 @@
 //import store from "@/store/store";
 
 export default {
-  
-  components: {  },
+  components: {},
   props: {
     showSkeleton: Boolean,
     showProductsComp: Boolean,
@@ -124,15 +123,10 @@ export default {
       search: "",
       loader: null,
       loading: false,
-      loading2: false,
       loading3: false,
-      loading4: false,
-      loading5: false,
       cart: [],
-      cartNotif: false,
       dialog: false,
       dialogData: []
-  
     };
   },
   watch: {
@@ -148,11 +142,11 @@ export default {
   computed: {},
   methods: {
     exploreDialog(index) {
-      this.dialogData = index
-      this.dialog = true
+      this.dialogData = index;
+      this.dialog = true;
     },
     closeDialog() {
-      this.dialog = false
+      this.dialog = false;
     },
     /* eslint-disable */
     myCart() {
