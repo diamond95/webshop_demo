@@ -3,7 +3,6 @@
     <router-view />
     <Navbar />
     <UserInformation></UserInformation>
-    
   </v-app>
 </template>
 
@@ -14,12 +13,12 @@ import store from "@/store/store";
 import Navbar from "./elements/Navbar";
 import UserInformation from './elements/Checkout/UserInformation'
 
+
 export default {
   name: "Checkout",
   components: {
     Navbar,
-    UserInformation
-
+    UserInformation,
   },
 
   computed: {

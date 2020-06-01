@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div class="empty-space"></div>
-    <v-row>
+    <v-row v-if="showUserInformation">
       <v-col cols="12" md="2" lg="2"></v-col>
       <v-col cols="12" md="8" lg="8">
         <v-stepper v-model="e1">
@@ -141,7 +141,7 @@
             </v-stepper-content>
 
             <v-stepper-content step="3">
-              <v-card class="mb-12" color="white lighten-1" >
+              <v-card class="mb-12" color="white lighten-1">
                 <!-- Finish order -->
                 <v-card class="mx-auto text-center" color="indigo " dark max-width="600">
                   <v-card-text>
@@ -165,19 +165,17 @@
                   <v-divider></v-divider>
 
                   <v-card-actions class="justify-center">
-                    <v-btn block text>Go to Report</v-btn>
+                    <v-btn block text @click="openReport()">Go to Report</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-card>
-
-              
-
             </v-stepper-content>
           </v-stepper-items>
         </v-stepper>
       </v-col>
       <v-col cols="12" md="2" lg="2"></v-col>
     </v-row>
+    <Report v-if="showReport"></Report>
   </v-container>
 </template>
 
@@ -188,7 +186,11 @@
 </style>
 
 <script>
+import Report from "./Report";
 export default {
+  components: {
+    Report
+  },
   methods: {
     back() {
       this.$router.push({
@@ -207,6 +209,10 @@ export default {
     },
     resetValidation() {
       this.$refs.form.resetValidation();
+    },
+    openReport() {
+      this.showUserInformation = false
+      this.showReport = true
     }
   },
   data() {
@@ -240,7 +246,9 @@ export default {
       menu: false,
       modal: false,
       menu2: false,
-      value: [423, 446, 675, 510, 590, 610, 760]
+      value: [423, 446, 675, 510, 590, 610, 760],
+      showReport: false,
+      showUserInformation: true
     };
   }
 };

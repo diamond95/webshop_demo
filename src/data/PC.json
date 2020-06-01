@@ -4,7 +4,7 @@
         "name": "LENOVO V530-15ICB TW",
         "photo": "http://developer-hr.com/webshop_demo/1.png",
         "description": "Intel Core i3 9100 up to 4.2GHz, 8GB DDR4, 256GB NVMe SSD, Nvidia GeForce GTX1650 SUPER 4GB, DVD-RW, 5 god jamstvo - PROMO",
-        "price": "5400,00",
+        "price": 5400.00,
         "rating": 3.9
 
     },
@@ -13,7 +13,7 @@
         "name": "Gamer Hydra",
         "photo": "http://developer-hr.com/webshop_demo/2.png",
         "description": "AMD Ryzen 3 3200G up to 4.0GHz, 8GB DDR4, 256GB NVMe SSD + 1TB HDD, Nvidia GeForce GTX1650 SUPER 4GB, no ODD, 5 god jamstvo",
-        "price": "6400,00",
+        "price": 6400.00,
         "rating": 4.1
     },
     {
@@ -21,7 +21,7 @@
         "name": "Gamer Hydra 2",
         "photo": "http://developer-hr.com/webshop_demo/3.png",
         "description": "AMD Ryzen 5 3400G up to 4.2GHz, 8GB DDR4, 256GB NVMe SSD + 1TB HDD, Nvidia GeForce GTX1650 SUPER 4GB, no ODD, 5 god jamstvo",
-        "price": "7256,00",
+        "price": 7256.00,
         "rating": 4.7
     },
     {
@@ -29,7 +29,7 @@
         "name": "Gamer SuperMax ",
         "photo": "http://developer-hr.com/webshop_demo/4.png",
         "description": "Intel Core i5 9500 up to 4.4GHz, 16GB DDR4, 256GB NVMe SSD + 1TB HDD, NVIDIA GeForce GTX1660 SUPER 6GB, no ODD, 5 god jamstvo - PROMO",
-        "price": "7000,00",
+        "price": 7000.00,
         "rating": 4.3
     },
     {
@@ -37,7 +37,7 @@
         "name": "Gamer SuperMax 2",
         "photo": "http://developer-hr.com/webshop_demo/5.png",
         "description": "AMD Ryzen 7 3700X up to 4.4GHz, 16GB DDR4, 256GB NVMe SSD + 1TB HDD, NVIDIA GeForce RTX2060 6GB, no ODD, 5 god jamstvo",
-        "price": "5496,00",
+        "price": 5496.00,
         "rating": 4.0
     },
     {
@@ -45,7 +45,7 @@
         "name": "Gamer SuperMax 3",
         "photo": "http://developer-hr.com/webshop_demo/6.png",
         "description": "AMD Ryzen 7 3700X up to 4.4GHz, 16GB DDR4, 256GB NVMe SSD, NVIDIA GeForce RTX2060 6GB, no ODD, 5 god jamstvo",
-        "price": "8965,00",
+        "price": 8965.00,
         "rating": 5.0
     }
 ]
