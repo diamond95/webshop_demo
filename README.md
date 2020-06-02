@@ -30,3 +30,13 @@ nodemon app.js
 
 ## Mobile responsive
 ![Screenshot](https://developer-hr.com/assets/images/responsive.png)
+
+## TODO list
+    - default products shown after user's login
+    - delete single item from cart ( actually not deleting it from vuex )
+    - explore button will show full image
+    - filter products on discount 
+    - search input for filter items on keyword 
+    - my orders
+    - remove items from cart after order
+    
