@@ -37,12 +37,12 @@ It is not necessary to run backend!
 
 ## TODO list
     - default products shown after user's login
-    - delete single item from cart ( actually not deleting it from vuex )  :white_check_mark:
-    - explore button will show full image :white_check_mark:
+    - delete single item from cart ( actually not deleting it from vuex )  ![](https://imgur.com/a/bp9whMl)
+    - explore button will show full image ![](https://imgur.com/a/bp9whMl)
     - filter products on discount 
-    - search input for filter items on keyword  :white_check_mark:
-    - my orders :white_check_mark:
-    - remove items from cart after order :white_check_mark:
+    - search input for filter items on keyword  ![](https://imgur.com/a/bp9whMl)
+    - my orders ![](https://imgur.com/a/bp9whMl)
+    - remove items from cart after order ![](https://imgur.com/a/bp9whMl)
     - heart(like) action on items
-    - error on backend :white_check_mark:
+    - error on backend ![](https://imgur.com/a/bp9whMl)
     - add delivered icon in Orders page
