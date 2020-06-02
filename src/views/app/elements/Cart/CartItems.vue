@@ -96,9 +96,8 @@ export default {
     },
 
     deleteItem(item) {
-      const index = this.items.indexOf(item);
       confirm("Are you sure you want to delete this item?") &&
-        this.items.splice(index, 1);
+        this.$store.commit("removeItem", item);
     },
 
     goBack() {

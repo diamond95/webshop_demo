@@ -317,7 +317,7 @@ button {
 <script>
 import store from "@/store/store";
 export default {
-    el: '#invoice-app',
+
         data: () => ({
             invoiceCurrency: {
                 "symbol": "kn",

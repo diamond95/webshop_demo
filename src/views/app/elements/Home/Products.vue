@@ -91,9 +91,8 @@
         <v-card-title class="headline blue lighten-2" primary-title>{{ dialogData.name }}</v-card-title>
         <div class="empty-space"></div>
         <v-card-text>{{ dialogData.description }}</v-card-text>
-
+        <v-img :src="dialogData.photo" height="400px"></v-img>
         <v-divider></v-divider>
-
         
         <v-divider dark></v-divider>
         <v-card-actions class="pa-4 white lighten-2">

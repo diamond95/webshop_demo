@@ -126,7 +126,7 @@
                         <v-date-picker v-model="date" scrollable type="month">
                           <v-spacer></v-spacer>
                           <v-btn text color="primary" @click="modal = false">Cancel</v-btn>
-                          <v-btn text color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+                          <v-btn text color="primary" @click="$refs.dialog.save(date);">OK</v-btn>
                         </v-date-picker>
                       </v-dialog>
                     </v-col>
@@ -135,7 +135,11 @@
                 </v-card>
               </v-form>
 
-              <v-btn color="indigo" class="white--text" @click="validate2(e1 = 3)">Continue</v-btn>
+              <v-btn
+                color="indigo"
+                class="white--text"
+                @click="validate2(e1 = 3);  add_orders();"
+              >Continue</v-btn>
 
               <v-btn text @click="e1 = 1">Back</v-btn>
             </v-stepper-content>
@@ -166,6 +170,9 @@
 
                   <v-card-actions class="justify-center">
                     <v-btn block text @click="openReport()">Go to Report</v-btn>
+                  </v-card-actions>
+                  <v-card-actions class="justify-center">
+                    <v-btn block text @click="$router.push({ name: 'Orders'});">Go to Orders</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-card>
@@ -211,8 +218,12 @@ export default {
       this.$refs.form.resetValidation();
     },
     openReport() {
-      this.showUserInformation = false
-      this.showReport = true
+      this.showUserInformation = false;
+      this.showReport = true;
+    },
+    add_orders() {
+      this.$store.commit("add_orders")
+      this.$store.commit("emptyCart", true)
     }
   },
   data() {

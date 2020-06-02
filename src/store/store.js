@@ -21,9 +21,10 @@ export default new Vuex.Store({
         token: null,
         user: null,
         isUserLoggedIn: false,
-      
+
         cart: [],
-        search: ''
+        search: '',
+        orders: []
 
     },
     mutations: {
@@ -38,20 +39,27 @@ export default new Vuex.Store({
         setUser(state, user) {
             state.token = user
         },
-  
+
         addToCart(state, cartitem) {
 
             state.cart.push(cartitem)
         },
         emptyCart(state, bool) {
 
-            if(bool) {
+            if (bool) {
                 state.cart = []
             }
-            
+
         },
         lastSearch(state, search) {
             state.search = search
+        },
+        removeItem(state, cartitem) {
+            var index = state.cart.findIndex(c => c.id == cartitem.id);
+            state.cart.splice(index, 1);
+        },
+        add_orders(state) {
+            state.orders.push.apply(state.orders, state.cart)
         }
 
 
@@ -63,7 +71,7 @@ export default new Vuex.Store({
         setUser({ commit }, user) {
             commit('setUser', user)
         },
- 
+
 
 
     }

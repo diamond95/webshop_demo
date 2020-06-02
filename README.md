@@ -17,14 +17,18 @@ npm run build
 ```
 
 ## Run Backend
-(second terminal / cmd)
+Important: Before running project, backend should be running first (port 8080). Use second terminal / cmd and type: 
 ```
-cd project
+cd project_path_where_you_clone_it
 cd server
 npm install
 cd src
 nodemon app.js
 ```
+## Note 
+Demo project currently not using backend for real, backend is there just for easy start.
+It is not necessary to run backend!
+
 ## Web
 ![Screenshot](https://developer-hr.com/assets/images/webshop.png)
 
@@ -33,10 +37,12 @@ nodemon app.js
 
 ## TODO list
     - default products shown after user's login
-    - delete single item from cart ( actually not deleting it from vuex )
-    - explore button will show full image
+    - delete single item from cart ( actually not deleting it from vuex )  :white_check_mark:
+    - explore button will show full image :white_check_mark:
     - filter products on discount 
-    - search input for filter items on keyword 
-    - my orders
-    - remove items from cart after order
-    
+    - search input for filter items on keyword  :white_check_mark:
+    - my orders :white_check_mark:
+    - remove items from cart after order :white_check_mark:
+    - heart(like) action on items
+    - error on backend :white_check_mark:
+    - add delivered icon in Orders page

@@ -19,6 +19,6 @@ require('./routes')(app)
 
 
 app.listen(port, hostname, () => {
-    console.log(`Server je zapoceo na: http://${hostname}:${port}/`);
+    console.log(`Server is running on: http://${hostname}:${port}/`);
     console.log(__dirname);
 });
