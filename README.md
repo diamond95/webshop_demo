@@ -37,12 +37,12 @@ It is not necessary to run backend!
 
 ## TODO list
     - default products shown after user's login
-    - delete single item from cart ( actually not deleting it from vuex )  ![](https://imgur.com/a/bp9whMl)
-    - explore button will show full image ![](https://imgur.com/a/bp9whMl)
+    - delete single item from cart ( actually not deleting it from vuex )  ![](https://i.imgur.com/G5jpHXw.png)
+    - explore button will show full image ![](https://i.imgur.com/G5jpHXw.png)
     - filter products on discount 
-    - search input for filter items on keyword  ![](https://imgur.com/a/bp9whMl)
-    - my orders ![](https://imgur.com/a/bp9whMl)
-    - remove items from cart after order ![](https://imgur.com/a/bp9whMl)
+    - search input for filter items on keyword  ![](https://i.imgur.com/G5jpHXw.png)
+    - my orders ![](https://i.imgur.com/G5jpHXw.png)
+    - remove items from cart after order ![](https://i.imgur.com/G5jpHXw.png)
     - heart(like) action on items
-    - error on backend ![](https://imgur.com/a/bp9whMl)
+    - error on backend ![](https://i.imgur.com/G5jpHXw.png)
     - add delivered icon in Orders page
