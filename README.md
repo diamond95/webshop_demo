@@ -30,7 +30,7 @@ Demo project currently not using backend for real, backend is there just for eas
 It is not necessary to run backend!
 
 ## Web
-![Screenshot](https://developer-hr.com/assets/images/webshop.png)
+![Screenshot](https://developer-hr.com/assets/images/webshop2.png)
 
 ## Mobile responsive
 ![Screenshot](https://developer-hr.com/assets/images/responsive.png)
