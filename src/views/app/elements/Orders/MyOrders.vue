@@ -62,7 +62,9 @@ export default {
     items: []
   }),
 
-  computed: {},
+  computed: {
+   
+  },
 
   created() {
     this.initialize();
@@ -70,6 +72,7 @@ export default {
 
   methods: {
     initialize() {
+
       this.items = store.state.orders;
     }
   }

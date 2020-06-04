@@ -29,6 +29,9 @@ nodemon app.js
 Demo project currently not using backend for real, backend is there just for easy start.
 It is not necessary to run backend!
 
+## Demo
+https://webshop-demo.netlify.app/
+
 ## Web
 ![Screenshot](https://developer-hr.com/assets/images/webshop2.png)
 
